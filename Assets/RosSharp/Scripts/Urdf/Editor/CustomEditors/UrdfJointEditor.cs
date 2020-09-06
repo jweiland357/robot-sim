@@ -26,13 +26,10 @@ namespace RosSharp.Urdf.Editor
         private UrdfJoint urdfJoint;
         private bool showDetails;
 
-        protected virtual void OnEnable()
-        {
-            urdfJoint = (UrdfJoint)serializedObject.targetObject;    
-        }
-
         public override void OnInspectorGUI()
         {
+            urdfJoint = (UrdfJoint) target;
+
             GUILayout.Space(5);
 
             UrdfJoint.JointTypes newJointType = urdfJoint.JointType;

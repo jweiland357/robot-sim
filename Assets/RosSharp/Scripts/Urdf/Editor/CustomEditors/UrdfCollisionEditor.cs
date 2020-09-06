@@ -23,37 +23,30 @@ namespace RosSharp.Urdf.Editor
     [CustomEditor(typeof(UrdfCollision))]
     class UrdfCollisionEditor : UnityEditor.Editor
     {
-        UrdfCollision obj;
-
-        protected virtual void OnEnable()
-        {
-            obj = (UrdfCollision)serializedObject.targetObject;
-        }
+        private UrdfCollision urdfCollision;
 
         public override void OnInspectorGUI()
         {
-            serializedObject.Update();
+            urdfCollision = (UrdfCollision)target;
 
             GUILayout.Space(5);
 
             EditorGUILayout.BeginHorizontal();
             EditorGUILayout.PrefixLabel("Geometry Type");
-            EditorGUILayout.LabelField(obj.GeometryType.ToString());
+            EditorGUILayout.LabelField(urdfCollision.geometryType.ToString());
             EditorGUILayout.EndHorizontal();
 
             DisplayWarnings();
-
-            serializedObject.ApplyModifiedProperties();
         }
 
         private void DisplayWarnings()
         {
-            if (!obj.transform.HasExactlyOneChild())
+            if (!urdfCollision.transform.HasExactlyOneChild())
             {
                 GUILayout.Space(5);
                 EditorGUILayout.HelpBox("Visual element must have one and only one child Geometry element.", MessageType.Error);
             }
-            else if (UrdfGeometry.IsTransformed(obj.transform.GetChild(0), obj.GeometryType))
+            else if (UrdfGeometry.IsTransformed(urdfCollision.transform.GetChild(0), urdfCollision.geometryType))
             {
                 GUILayout.BeginVertical("HelpBox");
                 EditorGUILayout.HelpBox("Changes to the transform of the child Geometry element cannot be exported to URDF. " +
@@ -62,8 +55,8 @@ namespace RosSharp.Urdf.Editor
                 if (GUILayout.Button("Fix transformations"))
                 {
                     //Only transfer rotation if geometry is not a mesh
-                    bool transferRotation = obj.GeometryType != GeometryTypes.Mesh;
-                    obj.transform.MoveChildTransformToParent(transferRotation);
+                    bool transferRotation = urdfCollision.geometryType != GeometryTypes.Mesh;
+                    urdfCollision.transform.MoveChildTransformToParent(transferRotation);
                 }
                 GUILayout.EndVertical();
             }

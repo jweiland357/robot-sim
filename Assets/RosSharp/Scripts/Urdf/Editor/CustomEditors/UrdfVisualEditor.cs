@@ -25,13 +25,10 @@ namespace RosSharp.Urdf.Editor
     {
         private UrdfVisual urdfVisual;
 
-        protected virtual void OnEnable()
-        {
-            urdfVisual = (UrdfVisual) serializedObject.targetObject;
-        }
-
         public override void OnInspectorGUI()
         {
+            urdfVisual = (UrdfVisual)target;
+
             GUILayout.Space(5);
 
             EditorGUILayout.BeginHorizontal();
