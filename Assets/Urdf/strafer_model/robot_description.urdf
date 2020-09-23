@@ -1,0 +1,2184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot
+  name="strafer_model">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.016292 3.3582E-06 -0.02018"
+        rpy="0 0 0" />
+      <mass
+        value="0.58644" />
+      <inertia
+        ixx="0.00065076"
+        ixy="7.8985E-07"
+        ixz="-2.2496E-13"
+        iyy="0.0035701"
+        iyz="-3.2998E-14"
+        izz="0.0040095" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="FrontLeftWheel">
+    <inertial>
+      <origin
+        xyz="3.39739815277407E-05 4.9356401105316E-06 -0.00613659782409681"
+        rpy="0 0 0" />
+      <mass
+        value="0.0804682866756198" />
+      <inertia
+        ixx="2.69245879503666E-05"
+        ixy="-2.00917821834308E-10"
+        ixz="4.63929817693137E-10"
+        iyy="2.69699462595992E-05"
+        iyz="-9.31893983633401E-10"
+        izz="4.08759690754829E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/FrontLeftWheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/FrontLeftWheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLWheel"
+    type="revolute">
+    <origin
+      xyz="0.168 0.1865 -0.024"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="FrontLeftWheel" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="FLRoller1">
+    <inertial>
+      <origin
+        xyz="-2.34268624221823E-08 3.63620185073188E-08 1.0754510831934E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744168031489" />
+      <inertia
+        ixx="1.80406494202718E-06"
+        ixy="2.14641839534138E-11"
+        ixz="-1.91050875400135E-12"
+        iyy="1.80394749460907E-06"
+        iyz="8.09468708840999E-13"
+        izz="4.6159022187171E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLRoll1"
+    type="continuous">
+    <origin
+      xyz="-0.03653 -0.016961 0.0041748"
+      rpy="0.7854 0 0.43633" />
+    <parent
+      link="FrontLeftWheel" />
+    <child
+      link="FLRoller1" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="FLRoller2">
+    <inertial>
+      <origin
+        xyz="-4.49325468845907E-08 4.0966877959403E-08 1.07527109071692E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744164564055" />
+      <inertia
+        ixx="1.80406478097708E-06"
+        ixy="2.14367409920363E-11"
+        ixz="-1.83601624036415E-12"
+        iyy="1.80394765211163E-06"
+        iyz="1.10435374774077E-12"
+        izz="4.61590241200356E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLRoll2"
+    type="continuous">
+    <origin
+      xyz="-0.017081 -0.036475 0.0041748"
+      rpy="0.7854 0 1.1345" />
+    <parent
+      link="FrontLeftWheel" />
+    <child
+      link="FLRoller2" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="FLRoller3">
+    <inertial>
+      <origin
+        xyz="-2.38113999767586E-08 1.44467253992975E-08 1.07504095642197E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744230621349" />
+      <inertia
+        ixx="1.80406624338752E-06"
+        ixy="2.45287119445432E-11"
+        ixz="-9.97163842188661E-13"
+        iyy="1.80394785966638E-06"
+        iyz="-4.03543768648695E-13"
+        izz="4.61590554384152E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLRoll3"
+    type="continuous">
+    <origin
+      xyz="0.01036 -0.038921 0.0041748"
+      rpy="0.7854 0 1.8326" />
+    <parent
+      link="FrontLeftWheel" />
+    <child
+      link="FLRoller3" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="FLRoller4">
+    <inertial>
+      <origin
+        xyz="-3.63776565259766E-08 3.45034985166359E-08 1.07540245798121E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744162788279" />
+      <inertia
+        ixx="1.80406483795751E-06"
+        ixy="2.14250374139785E-11"
+        ixz="-1.93939304855891E-12"
+        iyy="1.80394755863014E-06"
+        iyz="9.79505755039191E-13"
+        izz="4.61590235015267E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLRoll4"
+    type="continuous">
+    <origin
+      xyz="0.032954 -0.023156 0.0041748"
+      rpy="0.7854 0 2.5307" />
+    <parent
+      link="FrontLeftWheel" />
+    <child
+      link="FLRoller4" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="FLRoller5">
+    <inertial>
+      <origin
+        xyz="1.23485176528604E-08 -1.13964373771314E-08 1.07508174673476E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744230610089" />
+      <inertia
+        ixx="1.80406277156194E-06"
+        ixy="3.16480506904751E-11"
+        ixz="9.37537876195166E-13"
+        iyy="1.803951327602E-06"
+        iyz="5.8706291318539E-13"
+        izz="4.6159053646315E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLRoll5"
+    type="continuous">
+    <origin
+      xyz="0.040129 0.0034443 0.0041748"
+      rpy="-0.78444 -0.043675 0.04355" />
+    <parent
+      link="FrontLeftWheel" />
+    <child
+      link="FLRoller5" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="FLRoller6">
+    <inertial>
+      <origin
+        xyz="-2.17163979576718E-08 3.94999260522333E-08 1.07537513077127E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744167461434" />
+      <inertia
+        ixx="1.80406494822239E-06"
+        ixy="2.14815660143568E-11"
+        ixz="-1.85051149954687E-12"
+        iyy="1.80394749445496E-06"
+        iyz="7.88746699227551E-13"
+        izz="4.61590215120528E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLRoll6"
+    type="continuous">
+    <origin
+      xyz="0.028526 0.028433 0.0041748"
+      rpy="0.7854 0 -2.3562" />
+    <parent
+      link="FrontLeftWheel" />
+    <child
+      link="FLRoller6" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="FLRoller7">
+    <inertial>
+      <origin
+        xyz="7.1129492712485E-09 -3.75346422831768E-08 1.07544833555517E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744169152084" />
+      <inertia
+        ixx="1.80406506403846E-06"
+        ixy="2.14989064485802E-11"
+        ixz="1.85532828398602E-12"
+        iyy="1.80394742970951E-06"
+        iyz="-5.93779847757905E-13"
+        izz="4.6159022752474E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLRoll7"
+    type="continuous">
+    <origin
+      xyz="0.0035763 0.040117 0.0041748"
+      rpy="-0.7854 0 1.4835" />
+    <parent
+      link="FrontLeftWheel" />
+    <child
+      link="FLRoller7" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="FLRoller8">
+    <inertial>
+      <origin
+        xyz="2.40038156712474E-09 2.72000632572933E-08 1.07495550280348E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.011274422935902" />
+      <inertia
+        ixx="1.80406623432169E-06"
+        ixy="2.45289334876781E-11"
+        ixz="-7.92500932069932E-13"
+        iyy="1.80394784013193E-06"
+        iyz="-6.06160702632356E-13"
+        izz="4.61590520972789E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLRoll8"
+    type="continuous">
+    <origin
+      xyz="-0.023047 0.03303 0.0041748"
+      rpy="0.7854 0 -0.95993" />
+    <parent
+      link="FrontLeftWheel" />
+    <child
+      link="FLRoller8" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="FLRoller9">
+    <inertial>
+      <origin
+        xyz="-2.74759459906182E-08 4.92279496056014E-08 1.07521820149337E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744170259304" />
+      <inertia
+        ixx="1.80406491739991E-06"
+        ixy="2.15169251142341E-11"
+        ixz="-1.70579570544813E-12"
+        iyy="1.80394758575905E-06"
+        iyz="8.81940649496488E-13"
+        izz="4.61590195727897E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLRoll9"
+    type="continuous">
+    <origin
+      xyz="-0.038887 0.010488 0.0041748"
+      rpy="0.7854 0 -0.2618" />
+    <parent
+      link="FrontLeftWheel" />
+    <child
+      link="FLRoller9" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="FrontRightWheel">
+    <inertial>
+      <origin
+        xyz="4.36233315499468E-05 1.98643977483183E-05 -0.0063031560084984"
+        rpy="0 0 0" />
+      <mass
+        value="0.0806070802648314" />
+      <inertia
+        ixx="2.69339983694675E-05"
+        ixy="8.45197242498788E-09"
+        ixz="1.00834401414536E-09"
+        iyy="2.69652477885891E-05"
+        iyz="-1.90457148654837E-09"
+        izz="4.08798950068479E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/FrontRightWheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/FrontRightWheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRWheel"
+    type="revolute">
+    <origin
+      xyz="0.168 -0.1865 -0.024"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="FrontRightWheel" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="FRRoller1">
+    <inertial>
+      <origin
+        xyz="1.72301547751719E-08 2.21694913399295E-08 -5.89914095061594E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744231238086" />
+      <inertia
+        ixx="1.80406315272245E-06"
+        ixy="-3.26953192433989E-11"
+        ixz="-9.80443309782096E-13"
+        iyy="1.80395092178258E-06"
+        iyz="1.05356285559854E-13"
+        izz="4.61590531421906E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRRoll1"
+    type="continuous">
+    <origin
+      xyz="-0.038905 0.01042 0.0042545"
+      rpy="-0.7854 0 -0.2618" />
+    <parent
+      link="FrontRightWheel" />
+    <child
+      link="FRRoller1" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="FRRoller2">
+    <inertial>
+      <origin
+        xyz="8.47089914879362E-09 4.88616552496435E-08 -5.89353919573654E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744172818041" />
+      <inertia
+        ixx="1.80405972494955E-06"
+        ixy="-3.4161637092801E-11"
+        ixz="-1.23870576633177E-12"
+        iyy="1.8039528156778E-06"
+        iyz="1.74961375973445E-12"
+        izz="4.61590210352325E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRRoll2"
+    type="continuous">
+    <origin
+      xyz="-0.036501 -0.017025 0.0042545"
+      rpy="-0.7854 0 0.43633" />
+    <parent
+      link="FrontRightWheel" />
+    <child
+      link="FRRoller2" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="FRRoller3">
+    <inertial>
+      <origin
+        xyz="2.39597095635924E-09 2.5117392221663E-08 -5.88952659290667E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744099750016" />
+      <inertia
+        ixx="1.80405596432675E-06"
+        ixy="-3.58736954034125E-11"
+        ixz="-8.91837889891117E-13"
+        iyy="1.80395465737001E-06"
+        iyz="2.31939172871155E-13"
+        izz="4.61589908168111E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRRoll3"
+    type="continuous">
+    <origin
+      xyz="-0.017017 -0.036504 0.0042545"
+      rpy="-0.7854 0 1.1345" />
+    <parent
+      link="FrontRightWheel" />
+    <child
+      link="FRRoller3" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="FRRoller4">
+    <inertial>
+      <origin
+        xyz="-1.86562677528812E-08 4.08430093634671E-08 -5.88968424471148E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744101071283" />
+      <inertia
+        ixx="1.80405600234828E-06"
+        ixy="-3.58510973001867E-11"
+        ixz="-5.74981388808108E-13"
+        iyy="1.80395475136628E-06"
+        iyz="6.13315684559003E-13"
+        izz="4.61589949557257E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRRoll4"
+    type="continuous">
+    <origin
+      xyz="0.010429 -0.038903 0.0042545"
+      rpy="-0.7854 0 1.8326" />
+    <parent
+      link="FrontRightWheel" />
+    <child
+      link="FRRoller4" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="FRRoller5">
+    <inertial>
+      <origin
+        xyz="1.24872131801457E-08 2.33703876528768E-08 -5.89889340556204E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744230742733" />
+      <inertia
+        ixx="1.80406313344894E-06"
+        ixy="-3.27002401601859E-11"
+        ixz="-9.89834605214614E-13"
+        iyy="1.80395089952915E-06"
+        iyz="1.50531232900634E-13"
+        izz="4.61590525213857E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRRoll5"
+    type="continuous">
+    <origin
+      xyz="0.032995 -0.023098 0.0042545"
+      rpy="-0.7854 0 2.5307" />
+    <parent
+      link="FrontRightWheel" />
+    <child
+      link="FRRoller5" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="FRRoller6">
+    <inertial>
+      <origin
+        xyz="3.72740838194829E-10 -2.3394534504062E-09 -5.89679688434153E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744169150995" />
+      <inertia
+        ixx="1.80405966114829E-06"
+        ixy="-3.43117205376048E-11"
+        ixz="-6.77575136227232E-13"
+        iyy="1.80395278555732E-06"
+        iyz="-1.29435432265216E-12"
+        izz="4.61590235063729E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRRoll6"
+    type="continuous">
+    <origin
+      xyz="0.040122 0.0035148 0.0042545"
+      rpy="-0.7854 0 -3.0543" />
+    <parent
+      link="FrontRightWheel" />
+    <child
+      link="FRRoller6" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="FRRoller7">
+    <inertial>
+      <origin
+        xyz="2.76787206487938E-08 1.41292997024589E-08 -5.88884661534284E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744099174909" />
+      <inertia
+        ixx="1.80405600480879E-06"
+        ixy="-3.58621736539999E-11"
+        ixz="-1.09735819494275E-12"
+        iyy="1.80395470267342E-06"
+        iyz="-1.96976039198095E-13"
+        izz="4.61589931830094E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRRoll7"
+    type="continuous">
+    <origin
+      xyz="0.028476 0.028483 0.0042545"
+      rpy="-0.7854 0 -2.3562" />
+    <parent
+      link="FrontRightWheel" />
+    <child
+      link="FRRoller7" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="FRRoller8">
+    <inertial>
+      <origin
+        xyz="2.0840766161434E-08 -3.67983377103087E-09 -5.89501580774976E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.011274416423759" />
+      <inertia
+        ixx="1.80405949635789E-06"
+        ixy="-3.4268382847032E-11"
+        ixz="-6.74486806082054E-13"
+        iyy="1.80395285003788E-06"
+        iyz="-1.57584957095437E-12"
+        izz="4.61590225976892E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRRoll8"
+    type="continuous">
+    <origin
+      xyz="0.0035058 0.040123 0.0042545"
+      rpy="-0.7854 0 -1.6581" />
+    <parent
+      link="FrontRightWheel" />
+    <child
+      link="FRRoller8" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="FRRoller9">
+    <inertial>
+      <origin
+        xyz="3.20883486171208E-08 3.74913070935734E-08 -5.89355719884943E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744175389966" />
+      <inertia
+        ixx="1.80405988234266E-06"
+        ixy="-3.42507922758067E-11"
+        ixz="-1.3716603614675E-12"
+        iyy="1.80395275024669E-06"
+        iyz="1.41158639324287E-12"
+        izz="4.61590268309118E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRRoll9"
+    type="continuous">
+    <origin
+      xyz="-0.023105 0.03299 0.0042545"
+      rpy="-0.7854 0 -0.95993" />
+    <parent
+      link="FrontRightWheel" />
+    <child
+      link="FRRoller9" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="BackRightWheel">
+    <inertial>
+      <origin
+        xyz="3.58572408978297E-05 2.72734973197943E-05 -0.00634617417594935"
+        rpy="0 0 0" />
+      <mass
+        value="0.0807005099262135" />
+      <inertia
+        ixx="2.69261769077989E-05"
+        ixy="-3.27849618966633E-08"
+        ixz="-2.66992353464912E-10"
+        iyy="2.6973564164574E-05"
+        iyz="1.46570856814039E-09"
+        izz="4.08801253849229E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/BackRightWheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/BackRightWheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRWheel"
+    type="revolute">
+    <origin
+      xyz="-0.168 -0.1865 -0.024"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="BackRightWheel" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="BRRoller1">
+    <inertial>
+      <origin
+        xyz="-3.70549421702115E-09 -2.51753588809134E-08 1.07498380341048E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744229425427" />
+      <inertia
+        ixx="1.80406623639161E-06"
+        ixy="2.45317896151261E-11"
+        ixz="7.88062497975017E-13"
+        iyy="1.80394784062593E-06"
+        iyz="6.25590244682742E-13"
+        izz="4.61590525732879E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRRoll1"
+    type="continuous">
+    <origin
+      xyz="0.040117 -0.0035763 0.0041748"
+      rpy="-0.7854 0 -0.087266" />
+    <parent
+      link="BackRightWheel" />
+    <child
+      link="BRRoller1" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="BRRoller2">
+    <inertial>
+      <origin
+        xyz="-8.61319057743337E-10 -1.36720622601061E-08 1.07543658920406E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744159084329" />
+      <inertia
+        ixx="1.80406501297428E-06"
+        ixy="2.13189955994949E-11"
+        ixz="-3.69336073757058E-13"
+        iyy="1.80394724794449E-06"
+        iyz="1.75077527581196E-12"
+        izz="4.61590198509169E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRRoll2"
+    type="continuous">
+    <origin
+      xyz="0.028433 -0.028526 0.0041748"
+      rpy="-0.7854 0 -0.7854" />
+    <parent
+      link="BackRightWheel" />
+    <child
+      link="BRRoller2" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="BRRoller3">
+    <inertial>
+      <origin
+        xyz="1.11706555047664E-08 -1.29188574005124E-08 1.07608866123303E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744099792831" />
+      <inertia
+        ixx="1.80406376185463E-06"
+        ixy="1.8302217605316E-11"
+        ixz="9.2988695100941E-13"
+        iyy="1.80394693907748E-06"
+        iyz="4.54340564004758E-13"
+        izz="4.61589918341109E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRRoll3"
+    type="continuous">
+    <origin
+      xyz="0.0034443 -0.040129 0.0041748"
+      rpy="-0.7854 0 -1.4835" />
+    <parent
+      link="BackRightWheel" />
+    <child
+      link="BRRoller3" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="BRRoller4">
+    <inertial>
+      <origin
+        xyz="2.41257971378417E-08 -2.23283039280098E-08 1.07590918941441E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744096614576" />
+      <inertia
+        ixx="1.80406374482498E-06"
+        ixy="1.82725280835922E-11"
+        ixz="7.39345306567215E-13"
+        iyy="1.80394694118125E-06"
+        iyz="2.21186564380963E-13"
+        izz="4.61589922564266E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRRoll4"
+    type="continuous">
+    <origin
+      xyz="-0.023156 -0.032954 0.0041748"
+      rpy="-0.7854 0 -2.1817" />
+    <parent
+      link="BackRightWheel" />
+    <child
+      link="BRRoller4" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="BRRoller5">
+    <inertial>
+      <origin
+        xyz="2.38113999628808E-08 -1.44467253715419E-08 1.07504095642474E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.011274423062135" />
+      <inertia
+        ixx="1.80406624338753E-06"
+        ixy="2.45287119448873E-11"
+        ixz="9.9716384087179E-13"
+        iyy="1.80394785966638E-06"
+        iyz="4.03543767047273E-13"
+        izz="4.61590554384152E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRRoll5"
+    type="continuous">
+    <origin
+      xyz="-0.038921 -0.01036 0.0041748"
+      rpy="-0.7854 0 -2.8798" />
+    <parent
+      link="BackRightWheel" />
+    <child
+      link="BRRoller5" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="BRRoller6">
+    <inertial>
+      <origin
+        xyz="2.23238904029088E-08 -1.51046735674676E-08 1.07529976532683E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744160640576" />
+      <inertia
+        ixx="1.80406517596577E-06"
+        ixy="2.13173635292653E-11"
+        ixz="-3.81334855978968E-13"
+        iyy="1.80394717235211E-06"
+        iyz="1.43223600723487E-12"
+        izz="4.61590233449623E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRRoll6"
+    type="continuous">
+    <origin
+      xyz="-0.036475 0.017081 0.0041748"
+      rpy="-0.7854 0 2.7053" />
+    <parent
+      link="BackRightWheel" />
+    <child
+      link="BRRoller6" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="BRRoller7">
+    <inertial>
+      <origin
+        xyz="2.34268624776934E-08 -3.63620184778285E-08 1.07545108319618E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744168031489" />
+      <inertia
+        ixx="1.80406494202718E-06"
+        ixy="2.14641839530962E-11"
+        ixz="1.91050875369694E-12"
+        iyy="1.80394749460907E-06"
+        iyz="-8.09468709350542E-13"
+        izz="4.6159022187171E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRRoll7"
+    type="continuous">
+    <origin
+      xyz="-0.016961 0.03653 0.0041748"
+      rpy="-0.7854 0 2.0071" />
+    <parent
+      link="BackRightWheel" />
+    <child
+      link="BRRoller7" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="BRRoller8">
+    <inertial>
+      <origin
+        xyz="2.74759460010265E-08 -4.92279496272854E-08 1.07521820151002E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744170259304" />
+      <inertia
+        ixx="1.80406491739991E-06"
+        ixy="2.15169251144458E-11"
+        ixz="1.70579570431655E-12"
+        iyy="1.80394758575905E-06"
+        iyz="-8.81940649670196E-13"
+        izz="4.61590195727895E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRRoll8"
+    type="continuous">
+    <origin
+      xyz="0.010488 0.038887 0.0041748"
+      rpy="-0.7854 0 1.309" />
+    <parent
+      link="BackRightWheel" />
+    <child
+      link="BRRoller8" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="BRRoller9">
+    <inertial>
+      <origin
+        xyz="-3.56718636573827E-09 -2.61155022399095E-08 1.07596055964054E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744098368941" />
+      <inertia
+        ixx="1.8040637513681E-06"
+        ixy="1.8285493791034E-11"
+        ixz="6.81904798710302E-13"
+        iyy="1.80394693196833E-06"
+        iyz="7.09227059626632E-13"
+        izz="4.61589903990939E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRRoll9"
+    type="continuous">
+    <origin
+      xyz="0.03303 0.023047 0.0041748"
+      rpy="-0.7854 0 0.61087" />
+    <parent
+      link="BackRightWheel" />
+    <child
+      link="BRRoller9" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+<link
+    name="BackLeftWheel">
+    <inertial>
+      <origin
+        xyz="4.0941E-05 -1.4149E-05 -0.0063181"
+        rpy="0 0 0" />
+      <mass
+        value="0.080698" />
+      <inertia
+        ixx="2.6934E-05"
+        ixy="-2.2931E-08"
+        ixz="-2.783E-10"
+        iyy="2.6965E-05"
+        iyz="1.5662E-09"
+        izz="4.088E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/BackLeftWheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/BackLeftWheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLWheel"
+    type="revolute">
+    <origin
+      xyz="-0.168 0.1865 -0.024"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="BackLeftWheel" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="BLRoller1">
+    <inertial>
+      <origin
+        xyz="-2.17254289003321E-08 -4.87113209143852E-09 -5.89378497140025E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744160558805" />
+      <inertia
+        ixx="1.80405944644047E-06"
+        ixy="-3.43132667227434E-11"
+        ixz="5.40683496620466E-13"
+        iyy="1.8039528310075E-06"
+        iyz="1.58541441123077E-12"
+        izz="4.61590212009887E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLRoll1"
+    type="continuous">
+    <origin
+      xyz="-0.01042 -0.038905 0.0042545"
+      rpy="0.7854 0 -1.8326" />
+    <parent
+      link="BackLeftWheel" />
+    <child
+      link="BLRoller1" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="BLRoller2">
+    <inertial>
+      <origin
+        xyz="-4.0856044242199E-08 -4.30409763385597E-09 -5.89210596679823E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744155510455" />
+      <inertia
+        ixx="1.80405928282235E-06"
+        ixy="-3.42674287325038E-11"
+        ixz="5.109662796059E-13"
+        iyy="1.80395291971868E-06"
+        iyz="1.84551881226857E-12"
+        izz="4.61590228887421E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLRoll2"
+    type="continuous">
+    <origin
+      xyz="-0.03299 -0.023105 0.0042545"
+      rpy="0.7854 0 -2.5307" />
+    <parent
+      link="BackLeftWheel" />
+    <child
+      link="BLRoller2" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="BLRoller3">
+    <inertial>
+      <origin
+        xyz="1.38456099918471E-08 2.88012359517253E-08 -5.89536586492745E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744169068179" />
+      <inertia
+        ixx="1.80405503234017E-06"
+        ixy="-4.0636065817451E-11"
+        ixz="-1.42767380103949E-12"
+        iyy="1.80395741775438E-06"
+        iyz="1.76624996880674E-12"
+        izz="4.61590235519195E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLRoll3"
+    type="continuous">
+    <origin
+      xyz="-0.040123 0.0035058 0.0042545"
+      rpy="-0.78444 0.043675 -0.04355" />
+    <parent
+      link="BackLeftWheel" />
+    <child
+      link="BLRoller3" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="BLRoller4">
+    <inertial>
+      <origin
+        xyz="2.56448269841947E-08 -1.99863744998474E-08 -5.89339538362155E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744158751617" />
+      <inertia
+        ixx="1.80406315070926E-06"
+        ixy="-3.27127039723633E-11"
+        ixz="1.12514364149125E-12"
+        iyy="1.80395092390469E-06"
+        iyz="-2.88218474873583E-13"
+        izz="4.61590540553758E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLRoll4"
+    type="continuous">
+    <origin
+      xyz="-0.028483 0.028476 0.0042545"
+      rpy="-0.68472 0.42053 -0.32175" />
+    <parent
+      link="BackLeftWheel" />
+    <child
+      link="BLRoller4" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="BLRoller5">
+    <inertial>
+      <origin
+        xyz="4.23297569218661E-09 -1.38883214373386E-08 -5.90157839172947E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744232332196" />
+      <inertia
+        ixx="1.80406315070926E-06"
+        ixy="-3.27127039723633E-11"
+        ixz="1.12514364149125E-12"
+        iyy="1.80395092390469E-06"
+        iyz="-2.88218474873583E-13"
+        izz="4.61590540553758E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLRoll5"
+    type="continuous">
+    <origin
+      xyz="-0.0035148 0.040122 0.0042545"
+      rpy="0.7854 0 1.6581" />
+    <parent
+      link="BackLeftWheel" />
+    <child
+      link="BLRoller5" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="BLRoller6">
+    <inertial>
+      <origin
+        xyz="-1.71375630145243E-08 -6.23114582154471E-09 -5.89360059166655E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744160901282" />
+      <inertia
+        ixx="1.8040594611027E-06"
+        ixy="-3.43326200315308E-11"
+        ixz="5.35850019342379E-13"
+        iyy="1.80395279332181E-06"
+        iyz="1.52475538409759E-12"
+        izz="4.6159020725447E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLRoll6"
+    type="continuous">
+    <origin
+      xyz="0.023098 0.032995 0.0042545"
+      rpy="0.7854 0 0.95993" />
+    <parent
+      link="BackLeftWheel" />
+    <child
+      link="BLRoller6" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="BLRoller7">
+    <inertial>
+      <origin
+        xyz="2.91431965226963E-08 -3.51086250349741E-08 -5.8996651091936E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744232524902" />
+      <inertia
+        ixx="1.80407122184959E-06"
+        ixy="-9.90288567952687E-12"
+        ixz="9.77291497257143E-13"
+        iyy="1.80394291838317E-06"
+        iyz="-3.5180797951654E-13"
+        izz="4.61590577759381E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLRoll7"
+    type="continuous">
+    <origin
+      xyz="0.038903 0.010429 0.0042545"
+      rpy="0.77658 0.13202 0.12862" />
+    <parent
+      link="BackLeftWheel" />
+    <child
+      link="BLRoller7" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="BLRoller8">
+    <inertial>
+      <origin
+        xyz="-6.21301547709674E-09 -8.58724280572432E-09 -5.89438065071168E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744163639167" />
+      <inertia
+        ixx="1.80405952806111E-06"
+        ixy="-3.43649711310387E-11"
+        ixz="5.1594742247364E-13"
+        iyy="1.80395274294862E-06"
+        iyz="1.38413515528141E-12"
+        izz="4.61590215081298E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLRoll8"
+    type="continuous">
+    <origin
+      xyz="0.036504 -0.017017 0.0042545"
+      rpy="0.7854 0 -0.43633" />
+    <parent
+      link="BackLeftWheel" />
+    <child
+      link="BLRoller8" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="BLRoller9">
+    <inertial>
+      <origin
+        xyz="-1.35459343464372E-08 -3.14932402656343E-08 -5.88804667117637E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0112744100453136" />
+      <inertia
+        ixx="1.80405601151264E-06"
+        ixy="-3.58537620008819E-11"
+        ixz="7.44015169750218E-13"
+        iyy="1.8039546919774E-06"
+        iyz="-4.87641054724038E-14"
+        izz="4.61589887959331E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://strafer_model/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLRoll9"
+    type="continuous">
+    <origin
+      xyz="0.017025 -0.036501 0.0042545"
+      rpy="0.7854 0 -1.1345" />
+    <parent
+      link="BackLeftWheel" />
+    <child
+      link="BLRoller9" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+</robot>
