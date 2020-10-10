@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="shooter_model">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-1.4551E-05 -0.052169 0.015838"
+        rpy="0 0 0" />
+      <mass
+        value="1.114" />
+      <inertia
+        ixx="0.010163"
+        ixy="-1.2916E-06"
+        ixz="6.822E-07"
+        iyy="0.0053317"
+        iyz="0.0018095"
+        izz="0.012973" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shooter_model/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.7451 0.7451 0.7451 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shooter_model/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="FRWheel">
+    <inertial>
+      <origin
+        xyz="5.8031E-06 8.8354E-06 -0.0082204"
+        rpy="0 0 0" />
+      <mass
+        value="0.16407" />
+      <inertia
+        ixx="3.8997E-05"
+        ixy="1.6659E-08"
+        ixz="4.5334E-10"
+        iyy="3.9017E-05"
+        iyz="-4.1666E-10"
+        izz="4.9668E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shooter_model/meshes/FRWheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.62745 0.62745 0.62745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shooter_model/meshes/FRWheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FRJoint"
+    type="revolute">
+    <origin
+      xyz="0.2066 0.168 -0.024"
+      rpy="0 1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="FRWheel" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="FLWheel">
+    <inertial>
+      <origin
+        xyz="-3.9508E-06 4.6599E-06 -0.008236"
+        rpy="0 0 0" />
+      <mass
+        value="0.16419" />
+      <inertia
+        ixx="3.9004E-05"
+        ixy="-2.6354E-08"
+        ixz="4.3819E-10"
+        iyy="3.9012E-05"
+        iyz="3.8758E-10"
+        izz="4.9669E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shooter_model/meshes/FLWheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.62745 0.62745 0.62745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shooter_model/meshes/FLWheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FLJoint"
+    type="revolute">
+    <origin
+      xyz="-0.2066 0.168 -0.024"
+      rpy="3.1416 1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="FLWheel" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="BLWheel">
+    <inertial>
+      <origin
+        xyz="-4.1263E-06 -5.5054E-06 -0.0082799"
+        rpy="0 0 0" />
+      <mass
+        value="0.16419" />
+      <inertia
+        ixx="3.8979E-05"
+        ixy="-5.8741E-09"
+        ixz="-5.4874E-10"
+        iyy="3.9037E-05"
+        iyz="-3.2364E-10"
+        izz="4.9669E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shooter_model/meshes/BLWheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.62745 0.62745 0.62745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shooter_model/meshes/BLWheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BLJoint"
+    type="revolute">
+    <origin
+      xyz="-0.2066 -0.168 -0.024"
+      rpy="3.1416 1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="BLWheel" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="BRWheel">
+    <inertial>
+      <origin
+        xyz="5.9796E-06 -8.4624E-06 -0.0081765"
+        rpy="0 0 0" />
+      <mass
+        value="0.16407" />
+      <inertia
+        ixx="3.9026E-05"
+        ixy="-7.5297E-09"
+        ixz="-2.3714E-10"
+        iyy="3.8988E-05"
+        iyz="4.905E-10"
+        izz="4.9667E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shooter_model/meshes/BRWheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.62745 0.62745 0.62745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shooter_model/meshes/BRWheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BRJoint"
+    type="revolute">
+    <origin
+      xyz="0.2066 -0.168 -0.024"
+      rpy="0 1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="BRWheel" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="ShooterRight">
+    <inertial>
+      <origin
+        xyz="0 0 -1.3878E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.20305" />
+      <inertia
+        ixx="0.00014375"
+        ixy="-5.9707E-23"
+        ixz="3.6016E-21"
+        iyy="0.00014375"
+        iyz="1.3553E-20"
+        izz="0.00026566" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shooter_model/meshes/ShooterRight.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.047059 0.61569 0.047059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shooter_model/meshes/ShooterRight.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="SRJoint"
+    type="revolute">
+    <origin
+      xyz="0.1143 -0.14693 0.10996"
+      rpy="-0.46365 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="ShooterRight" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="ShooterLeft">
+    <inertial>
+      <origin
+        xyz="0 0 -1.3878E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.20305" />
+      <inertia
+        ixx="0.00014375"
+        ixy="8.0021E-21"
+        ixz="5.0386E-21"
+        iyy="0.00014375"
+        iyz="1.3553E-20"
+        izz="0.00026566" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shooter_model/meshes/ShooterLeft.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.047059 0.61569 0.047059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shooter_model/meshes/ShooterLeft.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="SLJoint"
+    type="revolute">
+    <origin
+      xyz="-0.1143 -0.14693 0.10996"
+      rpy="-0.46365 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="ShooterLeft" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Roller">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.01"
+        ixy="0"
+        ixz="0"
+        iyy="0.01"
+        iyz="0"
+        izz="0.01" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shooter_model/meshes/Roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://shooter_model/meshes/Roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RollerJoint"
+    type="continuous">
+    <origin
+      xyz="0.0075 0.196 -0.024"
+      rpy="0 1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Roller" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>
