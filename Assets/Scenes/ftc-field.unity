@@ -281,6 +281,54 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -1622039312787274446, guid: 8677b01bca72be24cb96d453bc7dbacf, type: 3}
+--- !u!1 &103613545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 103613546}
+  - component: {fileID: 103613547}
+  m_Layer: 0
+  m_Name: Shooter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &103613546
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103613545}
+  m_LocalRotation: {x: -0.15208188, y: 0.69055855, z: 0.15208188, w: 0.69055855}
+  m_LocalPosition: {x: 0.1938, y: 0.1464, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8554802754476103911}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: -24.84, y: 90, z: 0}
+--- !u!114 &103613547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103613545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc8a7d1b480b5c488f3c8dc27e361c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intake: {fileID: 8554802754476103912}
+  timeBetweenShots: 1
+  shotForceMult: 6.87
+  shootingAngle: {fileID: 103613545}
+  prefab: {fileID: 3856118921601237562}
 --- !u!1 &133923404 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6110814217450391603, guid: 258ac9ae19017804292833fc76b124b1,
@@ -7640,6 +7688,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ring
       objectReference: {fileID: 0}
+    - target: {fileID: 5089703838666619501, guid: 0f211d3c9d6e1594f8f9ce4769abcf7f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ring
+      objectReference: {fileID: 0}
     - target: {fileID: 8140567987221203070, guid: 0f211d3c9d6e1594f8f9ce4769abcf7f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7695,8 +7748,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5089703838666619500, guid: 0f211d3c9d6e1594f8f9ce4769abcf7f,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f211d3c9d6e1594f8f9ce4769abcf7f, type: 3}
+--- !u!1 &3856118921601237562 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5089703838666619501, guid: 0f211d3c9d6e1594f8f9ce4769abcf7f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3856118921601237561}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4756453891272393705
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7833,6 +7897,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8554802755248288498, guid: a20b8470d0b860845a930715ba78e91c,
+        type: 3}
+      propertyPath: intakeInput
+      value: 
+      objectReference: {fileID: 8554802754476103918}
+    - target: {fileID: 8554802755248288498, guid: a20b8470d0b860845a930715ba78e91c,
+        type: 3}
+      propertyPath: feederInput
+      value: 
+      objectReference: {fileID: 8554802754476103917}
+    - target: {fileID: 8554802755248288498, guid: a20b8470d0b860845a930715ba78e91c,
+        type: 3}
+      propertyPath: leftShooterInput
+      value: 
+      objectReference: {fileID: 8554802754476103916}
+    - target: {fileID: 8554802755248288498, guid: a20b8470d0b860845a930715ba78e91c,
+        type: 3}
+      propertyPath: rightShooterInput
+      value: 
+      objectReference: {fileID: 8554802754476103915}
+    - target: {fileID: 8554802755248288498, guid: a20b8470d0b860845a930715ba78e91c,
+        type: 3}
+      propertyPath: shooter
+      value: 
+      objectReference: {fileID: 103613545}
+    - target: {fileID: 8554802755248288498, guid: a20b8470d0b860845a930715ba78e91c,
+        type: 3}
+      propertyPath: intake
+      value: 
+      objectReference: {fileID: 8554802754476103912}
+    - target: {fileID: 8554802755626783239, guid: a20b8470d0b860845a930715ba78e91c,
+        type: 3}
+      propertyPath: m_UseMotor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554802755626783239, guid: a20b8470d0b860845a930715ba78e91c,
+        type: 3}
+      propertyPath: m_Motor.force
+      value: 3.81
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8554802754979083878, guid: a20b8470d0b860845a930715ba78e91c, type: 3}
     - {fileID: 8554802754979083928, guid: a20b8470d0b860845a930715ba78e91c, type: 3}
@@ -7847,3 +7951,99 @@ PrefabInstance:
     - {fileID: 8554802754341445350, guid: a20b8470d0b860845a930715ba78e91c, type: 3}
     - {fileID: 8554802754341445351, guid: a20b8470d0b860845a930715ba78e91c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a20b8470d0b860845a930715ba78e91c, type: 3}
+--- !u!4 &8554802754476103911 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8554802755903718296, guid: a20b8470d0b860845a930715ba78e91c,
+    type: 3}
+  m_PrefabInstance: {fileID: 8554802754476103910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8554802754476103912 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8554802755626783289, guid: a20b8470d0b860845a930715ba78e91c,
+    type: 3}
+  m_PrefabInstance: {fileID: 8554802754476103910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8554802754476103913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8554802754476103912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fe3b01ce140fb94b897396ae19ed190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerCellText: {fileID: 0}
+  maxNumberBalls: 3
+  numBalls: 3
+  timeOfBallContact: 0.25
+  coliderTag: Ring
+  wantedVelocity: 150
+--- !u!1 &8554802754476103914 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8554802755248288492, guid: a20b8470d0b860845a930715ba78e91c,
+    type: 3}
+  m_PrefabInstance: {fileID: 8554802754476103910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8554802754476103915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8554802754476103914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c51b74f853ebd2409e336d58e2c03b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Topic: /unity/motor8/input
+  TimeStep: 0
+  messageMode: 
+--- !u!114 &8554802754476103916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8554802754476103914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c51b74f853ebd2409e336d58e2c03b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Topic: /unity/motor7/input
+  TimeStep: 0
+  messageMode: 
+--- !u!114 &8554802754476103917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8554802754476103914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c51b74f853ebd2409e336d58e2c03b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Topic: /unity/motor6/input
+  TimeStep: 0
+  messageMode: 
+--- !u!114 &8554802754476103918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8554802754476103914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c51b74f853ebd2409e336d58e2c03b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Topic: /unity/motor5/input
+  TimeStep: 0
+  messageMode: 
